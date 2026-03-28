@@ -32,7 +32,22 @@
 
         {{-- 🔝 Content --}}
         <div class="relative z-10">
-            @include('layouts.admin-navigation')
+            @switch(auth()->user()->role->name)
+                @case('admin')
+                    @include('layouts.admin-navigation')
+                @break
+
+                @case('seller')
+                    @include('layouts.seller-navigation')
+                @break
+
+                @case('buyer')
+                    @include('layouts.buyer-navigation')
+                @break
+
+                @default
+                    @include('layouts.navigation')
+            @endswitch
 
             @isset($header)
                 <header class="bg-white shadow">

@@ -31,74 +31,73 @@
                 {{-- 📊 Statistics --}}
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-                    {{-- Total Seller --}}
+                    {{-- Total Seller - Ikon: Storefront --}}
                     <div class="bg-white shadow-sm rounded-lg border-l-4 border-tertiary hover:shadow-md transition">
                         <div class="p-6">
                             <div class="flex justify-between mb-4">
                                 <div class="text-primary bg-background p-3 rounded-full">
-                                    <svg class="h-6 w-6 fill-current" viewBox="-351 153 256 256">
-                                        <path d="M-276.9,265.2h19v14.9h-19V265.2z"/>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" class="h-6 w-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 21h3.75V13.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21Z" />
                                     </svg>
                                 </div>
                                 <span class="text-xs font-semibold text-accent bg-orange-50 px-2 py-1 rounded">
                                     +5 this week
                                 </span>
                             </div>
-
-                            <div class="text-3xl font-bold text-secondary"></div>
+                            <div class="text-3xl font-bold text-secondary">{{ $totalSeller }}</div>
                             <div class="text-sm text-gray-500">Total Seller</div>
                         </div>
                     </div>
 
-                    {{-- Total Buyer --}}
+                    {{-- Total Buyer - Ikon: Users --}}
                     <div class="bg-white shadow-sm rounded-lg border-l-4 border-tertiary hover:shadow-md transition">
                         <div class="p-6">
-                            <div class="text-primary bg-background p-3 rounded-full mb-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-width="2"
-                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M7 20H2v-2a3 3 0 015.356-1.857" />
+                            <div class="text-primary bg-background p-3 rounded-full mb-4 w-fit">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="2" stroke="currentColor" class="h-6 w-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
                                 </svg>
                             </div>
-
-                            <div class="text-3xl font-bold text-secondary"></div>
+                            <div class="text-3xl font-bold text-secondary">{{ $totalBuyer }}</div>
                             <div class="text-sm text-gray-500">Total Buyer</div>
                         </div>
                     </div>
 
-                    {{-- Total Product --}}
+                    {{-- Total Product - Ikon: Book Open (Sesuai tema buku Anda) --}}
                     <div class="bg-white shadow-sm rounded-lg border-l-4 border-tertiary hover:shadow-md transition">
                         <div class="p-6">
                             <div class="flex justify-between mb-4">
                                 <div class="text-primary bg-background p-3 rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-width="2"
-                                            d="M12 6v13m0 0C9 17 6 16 3 16V3c3 0 6 1 9 3m0 13c3-2 6-3 9-3V3c-3 0-6 1-9 3" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" class="h-6 w-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
                                     </svg>
                                 </div>
                                 <span class="text-xs font-semibold text-tertiary bg-teal-50 px-2 py-1 rounded">
                                     +12%
                                 </span>
                             </div>
-
-                            <div class="text-3xl font-bold text-secondary"></div>
+                            <div class="text-3xl font-bold text-secondary">lorem</div>
                             <div class="text-sm text-gray-500">Total Products</div>
                         </div>
                     </div>
 
-                    {{-- Total Categories --}}
+                    {{-- Total Categories - Ikon: Tag/Squares --}}
                     <div class="bg-white shadow-sm rounded-lg border-l-4 border-tertiary hover:shadow-md transition">
                         <div class="p-6">
-                            <div class="text-primary bg-background p-3 rounded-full mb-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-width="2"
-                                        d="M5 8h14M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8" />
+                            <div class="text-primary bg-background p-3 rounded-full mb-4 w-fit">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="2" stroke="currentColor" class="h-6 w-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581a2.25 2.25 0 0 0 3.182 0l4.318-4.318a2.25 2.25 0 0 0 0-3.182L11.159 3.659A2.25 2.25 0 0 0 9.568 3Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z" />
                                 </svg>
                             </div>
-
-                            <div class="text-3xl font-bold text-secondary"></div>
+                            <div class="text-3xl font-bold text-secondary">{{ $totalCategories }}</div>
                             <div class="text-sm text-gray-500">Total Categories</div>
                         </div>
                     </div>
@@ -121,7 +120,8 @@
                         <div class="p-6 space-y-4">
                             <div class="flex space-x-3">
                                 <div class="w-2 h-2 bg-accent rounded-full mt-2"></div>
-                                <p>New Book Added: <span class="italic text-primary">"The Hidden Life of Trees"</span></p>
+                                <p>New Book Added: <span class="italic text-primary">"The Hidden Life of Trees"</span>
+                                </p>
                             </div>
 
                             <div class="flex space-x-3">
@@ -139,7 +139,8 @@
                             </h3>
 
                             <div class="flex items-center space-x-4 mb-6">
-                                <div class="h-12 w-12 rounded-full bg-tertiary flex items-center justify-center text-secondary font-bold">
+                                <div
+                                    class="h-12 w-12 rounded-full bg-tertiary flex items-center justify-center text-secondary font-bold">
                                     {{ substr(Auth::user()->name, 0, 1) }}
                                 </div>
 

@@ -70,20 +70,20 @@
                         <thead class="bg-primary">
                             <tr>
                                 <th scope="col"
-                                    class="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-widest w-20">
+                                    class="px-6 py-4 text-center text-xs font-bold text-white uppercase tracking-widest w-20">
                                     ID</th>
                                 <th scope="col"
-                                    class="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-widest">
+                                    class="px-6 py-4 text-center text-xs font-bold text-white uppercase tracking-widest">
                                     Seller Name</th>
                                 <th scope="col"
-                                    class="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-widest">
+                                    class="px-6 py-4 text-center text-xs font-bold text-white uppercase tracking-widest">
                                     Email</th>
                                 <th scope="col"
                                     class="px-6 py-4 text-center text-xs font-bold text-white uppercase tracking-widest">
-                                    Role ID</th>
-                                <th scope="col"
-                                    class="px-6 py-4 text-left text-xs font-bold text-white uppercase tracking-widest">
                                     Created At</th>
+                                <th scope="col"
+                                    class="px-6 py-4 text-center text-xs font-bold text-white uppercase tracking-widest">
+                                    Updated At</th>
                                 <th scope="col"
                                     class="px-6 py-4 text-right text-xs font-bold text-white uppercase tracking-widest">
                                     Action</th>
@@ -96,7 +96,7 @@
                                     class="transition-all duration-300 ease-in-out group border-l-4 border-transparent hover:border-primary hover:bg-slate-50">
 
                                     {{-- ID --}}
-                                    <td class="px-6 py-5 pl-8 whitespace-nowrap">
+                                    <td class="px-6 py-5 pl-8 whitespace-nowrap text-center">
                                         <span
                                             class="px-2 py-1 bg-slate-100 text-tertiary rounded-md text-xs font-bold font-mono border border-slate-200/50">
                                             #{{ str_pad($seller->id, 3, '0', STR_PAD_LEFT) }}
@@ -104,7 +104,7 @@
                                     </td>
 
                                     {{-- Name --}}
-                                    <td class="px-6 py-5 whitespace-nowrap">
+                                    <td class="px-6 py-5 whitespace-nowrap text-center">
                                         <div
                                             class="text-sm font-bold text-secondary group-hover:text-primary transition-colors">
                                             {{ $seller->name }}
@@ -112,26 +112,27 @@
                                     </td>
 
                                     {{-- Email --}}
-                                    <td class="px-6 py-5 whitespace-nowrap">
-                                        <div class="text-sm text-slate-500 lowercase">
+                                    <td class="px-6 py-5 whitespace-nowrap text-center">
+                                        <div class="text-sm text-secondary-500 lowercase">
                                             {{ $seller->email }}
                                         </div>
                                     </td>
 
-                                    {{-- Role ID (Styled as Badge) --}}
-                                    <td class="px-6 py-5 whitespace-nowrap text-center">
-                                        <span
-                                            class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-[10px] font-black uppercase border border-blue-100">
-                                            ID: {{ $seller->role_id }}
-                                        </span>
-                                    </td>
-
                                     {{-- Created At --}}
-                                    <td class="px-6 py-5 whitespace-nowrap">
-                                        <div class="text-xs text-slate-400 font-medium">
+                                    <td class="px-6 py-5 whitespace-nowrap text-center">
+                                        <div class="text-xs text-secondary-400 font-medium">
                                             {{ $seller->created_at->format('d M Y') }}
                                             <span
-                                                class="block text-[10px] text-slate-300">{{ $seller->created_at->diffForHumans() }}</span>
+                                                class="block text-[10px] text-secondary-300 text-center">{{ $seller->created_at->diffForHumans() }}</span>
+                                        </div>
+                                    </td>
+
+                                    {{-- Updated At --}}
+                                    <td class="px-6 py-5 whitespace-nowrap text-center">
+                                        <div class="text-xs text-secondary-400 font-medium">
+                                            {{ $seller->updated_at->format('d M Y') }}
+                                            <span
+                                                class="block text-[10px] text-secondary-300">{{ $seller->created_at->diffForHumans() }}</span>
                                         </div>
                                     </td>
 

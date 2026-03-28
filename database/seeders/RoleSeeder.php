@@ -16,17 +16,17 @@ class RoleSeeder extends Seeder
     {
         DB::table('roles')->insert([
             [
-                'name' => 'Admin',
+                'name' => 'admin',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'name' => 'Seller',
+                'name' => 'seller',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'name' => 'Buyer',
+                'name' => 'buyer',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

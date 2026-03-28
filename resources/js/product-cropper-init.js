@@ -3,9 +3,9 @@ import 'cropperjs/dist/cropper.css';
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    const input = document.getElementById('pfp');
+    const input = document.getElementById('image');
     if(!input) return;
-    
+
     const preview = document.getElementById('image-preview');
 
     const modal = document.getElementById('cropper-modal');

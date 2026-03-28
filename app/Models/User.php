@@ -64,7 +64,7 @@ class User extends Authenticatable
         $role = strtolower(optional($this->role)->name ?? '');
         return match ($role) {
             'admin'  => 'admin.index',
-            'seller' => 'seller.dashboard',
+            'seller' => 'seller.index',
             'buyer'  => 'buyer.dashboard',
             default  => 'dashboard',
         };
@@ -91,4 +91,9 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Role::class);
     } 
+
+    public function products()
+    {
+        return $this->hasMany(Product::class, 'seller_id');
+    }
 }
