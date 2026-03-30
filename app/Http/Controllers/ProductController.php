@@ -27,7 +27,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::latest()->paginate('5');
+        $products = Product::where('seller_id', Auth::id())
+            ->latest()
+            ->paginate(10);
+            
         return view('pages.seller.product.index', compact('products'));
 
     }

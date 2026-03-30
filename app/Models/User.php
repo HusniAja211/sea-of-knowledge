@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Support\Facades\Storage;
+use Spatie\Permission\Traits\HasRoles;
 
 
 use App\Models\Role;
@@ -65,7 +66,7 @@ class User extends Authenticatable
         return match ($role) {
             'admin'  => 'admin.index',
             'seller' => 'seller.index',
-            'buyer'  => 'buyer.dashboard',
+            'buyer'  => 'buyer.index',
             default  => 'dashboard',
         };
     }
